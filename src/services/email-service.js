@@ -6,7 +6,7 @@ const ticketRepository = new TicketRepository();
 async function sendEmail(mailFrom, mailTo, subject, text) {
   try {
     const response = await MAILER.sendMail({
-      from: mailFrom,
+      from: `Airline Booking <${mailFrom}>`,
       to: mailTo,
       subject: subject,
       text: text,
